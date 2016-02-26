@@ -3,6 +3,9 @@
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.3.0.
 
 ## Getting Started
+git clone this project to local
+
+run npm install
 
 ### Prerequisites
 
