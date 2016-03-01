@@ -13,6 +13,7 @@ export default function(app) {
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
   app.use(express.static(path.join(__dirname, 'views')));
+  app.use('/api/customer',require('./api/Customer'));
 
   app.use('/auth', require('./auth'));
 
