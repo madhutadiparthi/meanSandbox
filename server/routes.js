@@ -6,11 +6,13 @@
 
 import errors from './components/errors';
 import path from 'path';
+import express from 'express';
 
 export default function(app) {
   // Insert routes below
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
+  app.use(express.static(path.join(__dirname, 'views')));
 
   app.use('/auth', require('./auth'));
 
