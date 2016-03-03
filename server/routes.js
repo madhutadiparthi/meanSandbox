@@ -12,8 +12,12 @@ export default function(app) {
   // Insert routes below
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
+  
   app.use(express.static(path.join(__dirname, 'views')));
   app.use('/api/customer',require('./api/Customer'));
+  app.use('/api/car',require('./api/Vehicle'));
+  app.use('/api/scenter',require('./api/ServiceCenter'));
+  app.use('/api/service',require('./api/Service'));
 
   app.use('/auth', require('./auth'));
 
