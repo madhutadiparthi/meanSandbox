@@ -19,7 +19,8 @@ var data =	{
 		"Status":"",//"{COMPLETED,CUST_DECLINED,CUST_RESCHEDULED,S_DECLINED}"
 		"ConfirmationMethod":{},	
 		"CurrentStatus":""//"{ACCEPTED,START_SERVICE,STOP_SERVICE,PART_AWAITING,CUST_CONFIRMATION_PENDING}"
-		}	
+		}	;
+return data;
 }
 
 export function info(req,resp)
