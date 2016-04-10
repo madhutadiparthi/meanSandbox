@@ -88,7 +88,12 @@
 														
 						</div>					
 						
-				</div>
+				</div>                            
+                            <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                                <h4>Registration Certificate</h4>
+                                <img id="logo" class="" style="max-width:290px;" src="http://localhost:9000/api/car/rcImage" />
+                            </div>
+                            
 			</div>
 		</div>
 
@@ -96,12 +101,11 @@
 
 
 		<script type="text/javascript">
-			var jData = '{"regNum" : "TN 22 CS 0079", "make" : "Maruti", "model":"Swift Zxi","year":"2012","color":"black","odometer":"28,000"}';
-			var dat = $.parseJSON(jData);
-			
-			$.each(dat,function(k,v){				
-				$("#" + k).text(v);			
-			 });
+                        var jData = $.getJSON('http://localhost:9000/api/car',function(result){
+                            $.each(result,function(k,v){				
+            				$("#" + k).text(v);			
+                    		 });
+                        });
 		</script>
 	</div>
 </body>
